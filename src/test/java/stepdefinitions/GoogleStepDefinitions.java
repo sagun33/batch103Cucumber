@@ -42,7 +42,7 @@ public class GoogleStepDefinitions {
     }
     @Then("sonuclarda tesla oldugunu dogrular")
     public void sonuclarda_tesla_oldugunu_dogrular() {
-        assert Driver.getDriver().getPageSource().contains("Tesla");
+        assert Driver.getDriver().getTitle().contains("Tesla");
 
     }
 }
