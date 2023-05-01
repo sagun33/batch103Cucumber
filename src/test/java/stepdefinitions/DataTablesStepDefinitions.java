@@ -45,10 +45,12 @@ public class DataTablesStepDefinitions {
     public void kullanici_start_date_girer(String string) {
         dataTablesPage.startDate.sendKeys(string);
     }
+
     @When("kullanici salary {string} girer")
     public void kullanici_salary_girer(String string) {
         dataTablesPage.salary.sendKeys(string);
     }
+
     @When("kullanici create buttonuna basar")
     public void kullanici_create_buttonuna_basar() {
         dataTablesPage.create.click();

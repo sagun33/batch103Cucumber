@@ -5,16 +5,17 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty",//raporlarin daha ikunakli olmasi icin
+                "pretty",//raporlarin daha okunakli olmasi icin
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt"
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "./src/test/resources/features",//features folder path
+        features = "./src/test/resources/US05_06_23",//features folder path
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
-        tags = "@failed_scenario",
+        tags = "@US05",
         dryRun = false
 )
 public class Runner {
